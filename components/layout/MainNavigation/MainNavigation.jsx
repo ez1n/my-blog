@@ -1,11 +1,12 @@
+import styles from "./MainNavigation.module.css";
+
 import Link from "next/link";
 import React from "react";
 import Logo from "../Logo/Logo";
-import styles from "./MainNavigation.module.css";
 
 export default function MainNavigation() {
   return (
-    <header>
+    <header className={styles.header}>
       <Link href='/'>
         <Logo />
       </Link>
