@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": " npm run open-browser && next dev",
-    "open-browser": "start http://localhost:30000",
+    "open-browser": "start http://localhost:3000",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -14,6 +14,7 @@
     "eslint-config-next": "13.2.3",
     "next": "13.2.3",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-markdown": "^8.0.5"
   }
 }
