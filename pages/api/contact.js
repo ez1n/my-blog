@@ -23,8 +23,9 @@ export default async function handler(req, res) {
     };
 
     let client;
+    const connectionString = `mongodb+srv://${process.env.mongodb_username}:${process.env.mongodb_password}@${process.env.mongodb_clustername}.2nwm1ot.mongodb.net/${process.env.mongodb_database}?retryWrites=true&w=majority`;
     try {
-      client = await MongoClient.connect(process.env.DB_URI);
+      client = await MongoClient.connect(connectionString);
     } catch (error) {
       res.status(500).json({ message: "데이터베이스에 연결할 수 없습니다." });
       return;
