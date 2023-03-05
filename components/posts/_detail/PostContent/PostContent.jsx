@@ -1,11 +1,18 @@
 import React from "react";
 import styles from "./PostContent.module.css";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { coldarkDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
+import coldarkDark from "react-syntax-highlighter/dist/cjs/styles/prism/coldark-dark";
+import js from "react-syntax-highlighter/dist/cjs/languages/prism/javascript";
+import css from "react-syntax-highlighter/dist/cjs/languages/prism/javascript";
+import html from "react-syntax-highlighter/dist/cjs/languages/prism/javascript";
 
 import Image from "next/image";
 import PostHeader from "../PostHeader/PostHeader";
+
+SyntaxHighlighter.registerLanguage("js", js);
+SyntaxHighlighter.registerLanguage("css", css);
+SyntaxHighlighter.registerLanguage("html", html);
 
 export default function PostContent({ post }) {
   const imagePath = `/images/posts/${post.slug}/${post.image}`;
